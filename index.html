@@ -4,33 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto PRF Elite</title>
+<title>PRF Elite</title>
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
-<h1>🚔 Projeto PRF Elite</h1>
+<h1>🚔 PRF Elite</h1>
 
 <div class="card">
-<h2>📊 Dashboard</h2>
-<p>Média geral: <span id="media">0%</span></p>
-<p>Nota estimada (120): <span id="nota">0</span></p>
-</div>
-
-<div class="card">
-<h2>📚 Registrar Estudo</h2>
-
-<label>Disciplina</label>
-<select id="disciplina">
-<option>Legislação de Trânsito</option>
-<option>Direito Constitucional</option>
-<option>Direito Penal</option>
-<option>Processo Penal</option>
-<option>Português</option>
-<option>RLM</option>
-</select>
-
+<h2>📊 Desempenho</h2>
 <label>Questões</label>
 <input type="number" id="questoes">
 
@@ -42,24 +27,33 @@
 
 <button onclick="registrar()">Registrar</button>
 
-<p id="resultado"></p>
+<canvas id="grafico"></canvas>
 
 </div>
+
 
 <div class="card">
-<h2>🏃 TAF</h2>
+<h2>📚 Controle de Tópicos</h2>
 
-<label>Corrida 12min (metros)</label>
-<input type="number" id="corrida">
-
-<label>Barra</label>
-<input type="number" id="barra">
-
-<button onclick="taf()">Avaliar</button>
-
-<p id="tafResultado"></p>
+<label><input type="checkbox" class="topico"> Interpretação de texto</label><br>
+<label><input type="checkbox" class="topico"> Pontuação</label><br>
+<label><input type="checkbox" class="topico"> Artigo 5º CF</label><br>
+<label><input type="checkbox" class="topico"> Crimes de trânsito</label><br>
+<label><input type="checkbox" class="topico"> Teoria do crime</label><br>
+<label><input type="checkbox" class="topico"> Atos administrativos</label><br>
 
 </div>
+
+
+<div class="card">
+<h2>🧠 Flashcards</h2>
+
+<textarea id="flashcard" placeholder="Escreva aqui seus resumos ou flashcards..."></textarea>
+
+<button onclick="salvarFlash()">Salvar</button>
+
+</div>
+
 
 <script src="app.js"></script>
 
