@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PRF Elite</title>
 <link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -14,47 +13,49 @@
 
 <h1>🚔 PRF Elite</h1>
 
-<div class="card">
+<div class="container">
+
+<div class="panel">
+
 <h2>📊 Desempenho</h2>
-<label>Questões</label>
-<input type="number" id="questoes">
 
-<label>Acertos</label>
-<input type="number" id="acertos">
+<input id="q" type="number" placeholder="Questões">
+<input id="a" type="number" placeholder="Acertos">
+<input id="e" type="number" placeholder="Erros">
 
-<label>Erros</label>
-<input type="number" id="erros">
-
-<button onclick="registrar()">Registrar</button>
+<button onclick="registrar()">Registrar sessão</button>
 
 <canvas id="grafico"></canvas>
 
 </div>
 
 
-<div class="card">
-<h2>📚 Controle de Tópicos</h2>
+<div class="panel">
 
-<label><input type="checkbox" class="topico"> Interpretação de texto</label><br>
-<label><input type="checkbox" class="topico"> Pontuação</label><br>
-<label><input type="checkbox" class="topico"> Artigo 5º CF</label><br>
-<label><input type="checkbox" class="topico"> Crimes de trânsito</label><br>
-<label><input type="checkbox" class="topico"> Teoria do crime</label><br>
-<label><input type="checkbox" class="topico"> Atos administrativos</label><br>
+<h2>📚 Matérias e tópicos</h2>
+
+<select id="materia"></select>
+
+<div id="topicos"></div>
 
 </div>
 
 
-<div class="card">
+<div class="panel">
+
 <h2>🧠 Flashcards</h2>
 
-<textarea id="flashcard" placeholder="Escreva aqui seus resumos ou flashcards..."></textarea>
+<select id="flashMateria"></select>
+
+<textarea id="flashText" placeholder="Escreva seu resumo..."></textarea>
 
 <button onclick="salvarFlash()">Salvar</button>
 
 </div>
 
+</div>
 
+<script src="subjects.js"></script>
 <script src="app.js"></script>
 
 </body>

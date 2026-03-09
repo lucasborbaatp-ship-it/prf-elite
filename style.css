@@ -3,22 +3,31 @@ body{
 font-family:Arial;
 background:#0f172a;
 color:white;
-text-align:center;
 padding:20px;
 }
 
-.card{
+h1{
+text-align:center;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.panel{
 background:#1e293b;
 padding:20px;
-margin:20px auto;
-border-radius:12px;
-max-width:500px;
+border-radius:10px;
+width:320px;
 }
 
-input,textarea{
-width:85%;
+input,select,textarea{
+width:100%;
+margin:6px 0;
 padding:8px;
-margin:6px;
 border-radius:6px;
 border:none;
 }
@@ -30,8 +39,13 @@ height:120px;
 button{
 background:#22c55e;
 border:none;
-padding:10px 20px;
+padding:10px;
 border-radius:6px;
 color:white;
-margin-top:10px;
+width:100%;
+}
+
+label{
+display:block;
+margin:4px 0;
 }
