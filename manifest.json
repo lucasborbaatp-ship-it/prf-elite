@@ -1,0 +1,9 @@
+
+{
+"name":"Projeto PRF Elite",
+"short_name":"PRF Elite",
+"display":"standalone",
+"start_url":"index.html",
+"background_color":"#0f172a",
+"theme_color":"#0f172a"
+}
